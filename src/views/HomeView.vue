@@ -14,6 +14,7 @@
 import Icons from "@/components/Icons.vue";
 import BioBox from "@/components/BioBox.vue";
 import ServerBox from "@/components/ServerBox.vue";
+import RegisterBox from "@/components/RegisterBox.vue";
 import { computed } from "vue";
 import { mainStore } from "@/stores/main";
 
