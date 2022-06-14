@@ -1,7 +1,5 @@
 <template>
   <div class="server-box">
-    <button @click="toggle" class="server-box__toggle"><img src="/imgs/bioboxbtn.png"
-        class="server-box__toggle-img"></button>
     <template v-if="loaded">
       <data-status title="Total Online" :data="data.TotalOnline" />
       <data-status title="Server 1" :data="data.Server1" />
@@ -15,6 +13,8 @@
         <p class="message-box__message">{{ message }}</p>
       </div>
     </template>
+    <button @click="toggle" class="server-box__toggle"><img src="/imgs/bioboxbtn.png"
+        class="server-box__toggle-img"></button>
   </div>
 </template>
 

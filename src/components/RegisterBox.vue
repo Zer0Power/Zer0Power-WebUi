@@ -1,15 +1,100 @@
-<template>
-
+  <template>
+  <div class="bio-box">
+    <img class="bio-box__pfp" src="/imgs/profilepic2.jpg" alt="" />
+    <h3 class="bio-box__title">'Zer0Power</h3>
+    <p class="bio-box__subtitle">Maxgaming Dev</p>
+    <form action="https">
+      <div class="container">
+        <UserCircleIcon style="width:2rem;height: 2rem;" />
+        <input type="email" class="input" placeholder="Email" v-model="email" required>
+      </div>
+      
+      <div class="container">
+        <LockClosedIcon style="width:2rem;height: 2rem;" />
+        <input type="password" class="input" placeholder="password" v-model="password">
+      </div>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
 </template>
 
-
-
-
 <script setup>
+import { UserCircleIcon, LockClosedIcon } from "@heroicons/vue/outline";
+
+import axios from "axios";
+import { ref } from "vue";
+
+
+const email = ref("");
+const password =ref("");
+
+function onSubmit() {
+  axios.post
+}
 
 </script>
 
-
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
+
+.bio-box {
+  background: $boxes-color;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 76%;
+  color: white;
+  position: relative;
+  margin: 0.8rem 0;
+  max-width: $boxes-width;
+  backdrop-filter: blur(0.8rem);
+  z-index: 10;
+
+  @media screen and (min-width: $md) {
+    width: $boxes-width;
+  }
+
+  .bio-box__pfp {
+    display: block;
+    width: 40%;
+    margin: auto;
+    border-radius: 0.3rem;
+  }
+
+  .bio-box__title {
+    font-family: "Macondo", cursive;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    margin: 0.3rem;
+  }
+
+  .bio-box__subtitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #131415;
+    text-align: center;
+    margin: 0;
+  }
+
+  .input {
+    flex-grow: 1;
+    background: transparent;
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5rem;
+    border: solid 1px white; 
+    padding: 0.2rem 0.3rem; 
+    margin: 0.5rem 0; 
+    gap: 0.2rem;
+  }
+  
+}
 </style>
