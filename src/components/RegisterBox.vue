@@ -6,12 +6,12 @@
     <form action="http://localhost:3000/auth/get-data/" method="POST">
       <div class="container">
         <UserCircleIcon style="width:2rem;height: 2rem;" />
-        <input type="email" class="input" placeholder="Email" v-model="email" required>
+        <input type="email" class="input" placeholder="Email" name="email" required>
       </div>
       
       <div class="container">
         <LockClosedIcon style="width:2rem;height: 2rem;" />
-        <input type="password" class="input" placeholder="Password" v-model="password" required>
+        <input type="password" class="input" placeholder="Password" name="password" required>
       </div>
       <button class="submit-btn" type="submit">Continue</button>
     </form>
@@ -20,15 +20,7 @@
 
 <script setup>
 import { UserCircleIcon, LockClosedIcon } from "@heroicons/vue/outline";
-
-import axios from "axios";
 import { ref } from "vue";
-
-
-const email = ref("");
-const password =ref("");
-
-
 </script>
 
 <style lang="scss" scoped>
