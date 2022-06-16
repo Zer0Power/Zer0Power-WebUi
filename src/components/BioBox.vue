@@ -23,7 +23,7 @@
     <button class="bio-box__toggle1" @click="toggle"><img class="bio-box__toggle-img"
         src="/imgs/serverboxbtn.png"></button>
     <router-link :to="{ name: 'auth' }" class="bio-box__toggle2"><img class="bio-box__toggle-img"
-        src="/imgs/serverboxbtn.png"></router-link>
+        src="/imgs/registerbtn.png"></router-link>
   </div>
 </template>
 

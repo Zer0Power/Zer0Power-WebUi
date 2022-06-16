@@ -3,7 +3,7 @@
     <img class="bio-box__pfp" src="/imgs/profilepic2.jpg" alt="" />
     <h3 class="bio-box__title">'Zer0Power</h3>
     <p class="bio-box__subtitle">Maxgaming Dev</p>
-    <form action="" method="POST">
+    <form action="http://localhost:3000/auth/get-data/" method="POST">
       <div class="container">
         <UserCircleIcon style="width:2rem;height: 2rem;" />
         <input type="email" class="input" placeholder="Email" v-model="email" required>
@@ -11,7 +11,7 @@
       
       <div class="container">
         <LockClosedIcon style="width:2rem;height: 2rem;" />
-        <input type="password" class="input" placeholder="password" v-model="password">
+        <input type="password" class="input" placeholder="Password" v-model="password" required>
       </div>
       <button class="submit-btn" type="submit">Continue</button>
     </form>
@@ -28,9 +28,6 @@ import { ref } from "vue";
 const email = ref("");
 const password =ref("");
 
-function onSubmit() {
-  axios.post
-}
 
 </script>
 
@@ -38,6 +35,7 @@ function onSubmit() {
 @import "@/assets/scss/variables";
 
 .bio-box {
+  font-family: "Roboto", sans-serif;
   background: $boxes-color;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -77,11 +75,13 @@ function onSubmit() {
   }
 
   .input {
+    font-family: "Roboto", sans-serif;
     flex-grow: 1;
     background: transparent;
     color: white;
 
     &::placeholder {
+      font-family: "Roboto", sans-serif;
       color: white;
     }
   }
