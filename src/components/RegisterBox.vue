@@ -3,7 +3,7 @@
     <img class="bio-box__pfp" src="/imgs/profilepic2.jpg" alt="" />
     <h3 class="bio-box__title">'Zer0Power</h3>
     <p class="bio-box__subtitle">Maxgaming Dev</p>
-    <form action="https">
+    <form action="" method="POST">
       <div class="container">
         <UserCircleIcon style="width:2rem;height: 2rem;" />
         <input type="email" class="input" placeholder="Email" v-model="email" required>
@@ -13,7 +13,7 @@
         <LockClosedIcon style="width:2rem;height: 2rem;" />
         <input type="password" class="input" placeholder="password" v-model="password">
       </div>
-      <button type="submit">Continue</button>
+      <button class="submit-btn" type="submit">Continue</button>
     </form>
   </div>
 </template>
@@ -96,5 +96,13 @@ function onSubmit() {
     gap: 0.2rem;
   }
   
+  .submit-btn {
+    display: block;width:100%;
+    background: #A9A9A9;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    box-sizing: border-box;
+  }
 }
 </style>

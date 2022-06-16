@@ -20,8 +20,10 @@
       <tag>⌨️ Programmer</tag>
       <tag>💫 Roro Lover</tag>
     </div>
-    <button class="bio-box__toggle" @click="toggle"><img class="bio-box__toggle-img"
+    <button class="bio-box__toggle1" @click="toggle"><img class="bio-box__toggle-img"
         src="/imgs/serverboxbtn.png"></button>
+    <router-link :to="{ name: 'auth' }" class="bio-box__toggle2"><img class="bio-box__toggle-img"
+        src="/imgs/serverboxbtn.png"></router-link>
   </div>
 </template>
 
@@ -95,7 +97,7 @@ function toggle() {
     gap: 0.3rem;
   }
 
-  .bio-box__toggle {
+  .bio-box__toggle1 {
     position: absolute;
     left: 100%;
     top: 2rem;
@@ -112,5 +114,24 @@ function toggle() {
       width: 30px;
     }
   }
+
+  .bio-box__toggle2 {
+    position: absolute;
+    left: 100%;
+    top: 7.3rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 0;
+      z-index: 1;
+    }
+
+    .bio-box__toggle-img {
+      opacity: 0.5;
+      width: 30px;
+    }
+  }
+  
 }
 </style>
