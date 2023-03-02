@@ -34,7 +34,7 @@ npm run serve
 ### Compile and Minify for Production
 
 ```sh
-npm run build
+npm run build.
 ```
 
 <h2>Repo Stat</h2>
